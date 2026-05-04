@@ -147,7 +147,7 @@
         "git_branch": "RELEASE_3_22",
         "git_last_commit": "3d6f2f6",
         "git_last_commit_date": "2025-10-29",
-        "Repository": "Bioconductor 3.22",
+        "Repository": "https://bioconductor.org/packages/3.22/bioc",
         "Date/Publication": "2025-10-29",
         "NeedsCompilation": "yes",
         "Packaged": "2025-10-30 02:08:45 UTC; biocbuild",
