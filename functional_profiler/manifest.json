@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "locale": "en_US.UTF-8",
+  "metadata": {
+    "appmode": "shiny",
+    "entrypoint": "app.R"
+  },
+  "files": {
+    "app.R": {
+      "checksum": ""
+    },
+    "README.md": {
+      "checksum": ""
+    },
+    "data/otu_table.csv": {
+      "checksum": ""
+    },
+    "data/taxonomy_table.csv": {
+      "checksum": ""
+    },
+    "data/sample_metadata.csv": {
+      "checksum": ""
+    },
+    "data/centrifuge_reports.biom": {
+      "checksum": ""
+    },
+    "ggpicrust2_cache/ko_reference.rds": {
+      "checksum": ""
+    }
+  },
+  "packages": [
+    {
+      "name": "R",
+      "version": "4.3.0"
+    },
+    {
+      "name": "shiny",
+      "version": "1.7.0",
+      "source": "CRAN"
+    },
+    {
+      "name": "phyloseq",
+      "version": "1.44.0",
+      "source": "Bioconductor"
+    },
+    {
+      "name": "ggplot2",
+      "version": "3.4.0",
+      "source": "CRAN"
+    },
+    {
+      "name": "vegan",
+      "version": "2.6.0",
+      "source": "CRAN"
+    },
+    {
+      "name": "DESeq2",
+      "version": "1.40.0",
+      "source": "Bioconductor",
+      "optional": true
+    },
+    {
+      "name": "ggpicrust2",
+      "version": "1.7.0",
+      "source": "CRAN",
+      "optional": true
+    },
+    {
+      "name": "ALDEx2",
+      "version": "1.32.0",
+      "source": "Bioconductor",
+      "optional": true
+    },
+    {
+      "name": "edgeR",
+      "version": "3.42.0",
+      "source": "Bioconductor",
+      "optional": true
+    },
+    {
+      "name": "limma",
+      "version": "3.56.0",
+      "source": "Bioconductor",
+      "optional": true
+    },
+    {
+      "name": "tidyverse",
+      "version": "1.3.2",
+      "source": "CRAN"
+    }
+  ]
+}
