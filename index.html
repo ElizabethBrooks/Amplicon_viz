@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amplicon Analysis Suite</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .app-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        }
+        
+        .app-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .app-card h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .app-subtitle {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .app-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        
+        .features {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+        }
+        
+        .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95em;
+            color: #666;
+        }
+        
+        .features li:before {
+            content: "✓ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .launch-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 30px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-top: 20px;
+        }
+        
+        .launch-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .launch-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            opacity: 0.85;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .terminal-commands {
+            background: rgba(0, 0, 0, 0.8);
+            color: #0f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-family: "Courier New", monospace;
+            font-size: 0.9em;
+            line-height: 1.6;
+            overflow-x: auto;
+        }
+        
+        .terminal-commands h3 {
+            color: #0f0;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        
+        code {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2px 6px;
+            border-radius: 3px;
+            display: block;
+            margin: 5px 0;
+        }
+        
+        .divider {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .header p {
+                font-size: 1em;
+            }
+            
+            .app-card {
+                padding: 25px;
+            }
+            
+            .app-card h2 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧬 Amplicon Analysis Suite</h1>
+            <p>Microbiome Data Exploration & Functional Profiling</p>
+        </div>
+        
+        <div class="apps-grid">
+            <!-- Amplicon Explorer Card -->
+            <div class="app-card">
+                <div class="app-icon">🔬</div>
+                <h2>Amplicon Explorer</h2>
+                <div class="app-subtitle">16S / ITS Diversity Analysis</div>
+                
+                <div class="app-description">
+                    Comprehensive exploratory analysis of taxonomic diversity and community composition. Start here to understand your microbiome data through alpha/beta diversity, taxa composition, and core microbiome analysis.
+                </div>
+                
+                <ul class="features">
+                    <li>Alpha Diversity (Shannon, Simpson, Richness)</li>
+                    <li>Beta Ordination (NMDS, PCoA)</li>
+                    <li>Taxa Composition Stacked Bar Charts</li>
+                    <li>Hierarchical Clustering</li>
+                    <li>PERMANOVA Testing</li>
+                    <li>Core Microbiome Analysis</li>
+                    <li>Rarefaction Curves</li>
+                </ul>
+                
+                <a href="#amplicon-launch" class="launch-btn" onclick="launchAmplicon(event)">
+                    Launch Amplicon Explorer →
+                </a>
+            </div>
+            
+            <!-- Functional Profiler Card -->
+            <div class="app-card">
+                <div class="app-icon">🧬</div>
+                <h2>Functional Profiler</h2>
+                <div class="app-subtitle">DESeq2 & PICRUSt2 Analysis</div>
+                
+                <div class="app-description">
+                    Specialized app for differential abundance analysis and metabolic pathway prediction. Use after Amplicon Explorer to understand which specific taxa and pathways drive community differences.
+                </div>
+                
+                <ul class="features">
+                    <li>DESeq2 Differential Abundance</li>
+                    <li>Volcano Plots & Statistics</li>
+                    <li>PICRUSt2 Pathway Analysis</li>
+                    <li>Multiple DAA Methods (LinDA, ALDEx2, DESeq2, edgeR)</li>
+                    <li>KO / MetaCyc / EC Pathways</li>
+                    <li>PCA & Heatmap Visualization</li>
+                    <li>KO-to-KEGG Annotation</li>
+                </ul>
+                
+                <a href="#functional-launch" class="launch-btn" onclick="launchFunctional(event)">
+                    Launch Functional Profiler →
+                </a>
+            </div>
+        </div>
+        
+        <div class="terminal-commands">
+            <h3>Or launch from terminal:</h3>
+            <code>cd amplicon_explorer && Rscript -e "shiny::runApp()"</code>
+            <div class="divider">— OR —</div>
+            <code>cd functional_profiler && Rscript -e "shiny::runApp()"</code>
+        </div>
+        
+        <div class="footer">
+            <p>📚 For detailed documentation, see README.md files in each app directory</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">Created April 2026 • Built with R Shiny • Data: phyloseq, DESeq2, ggpicrust2</p>
+        </div>
+    </div>
+    
+    <script>
+        function launchAmplicon(event) {
+            event.preventDefault();
+            const instructions = `
+To launch Amplicon Explorer:
+
+1. Open R or RStudio
+2. Run these commands:
+
+    setwd("amplicon_explorer")
+    shiny::runApp()
+
+Or from terminal:
+    cd amplicon_explorer
+    Rscript -e "shiny::runApp()"
+
+The app will open in your web browser automatically.
+            `;
+            alert(instructions);
+        }
+        
+        function launchFunctional(event) {
+            event.preventDefault();
+            const instructions = `
+To launch Functional Profiler:
+
+1. Open R or RStudio
+2. Run these commands:
+
+    setwd("functional_profiler")
+    shiny::runApp()
+
+Or from terminal:
+    cd functional_profiler
+    Rscript -e "shiny::runApp()"
+
+The app will open in your web browser automatically.
+            `;
+            alert(instructions);
+        }
+    </script>
+</body>
+</html>
