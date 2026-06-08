@@ -1,5 +1,5 @@
-required_pkgs <- c("shiny", "phyloseq", "ggplot2", "vegan")
-optional_pkgs <- c("DESeq2", "ggpicrust2", "ALDEx2", "edgeR", "limma")
+required_pkgs <- c("shiny", "phyloseq", "ggplot2", "vegan", "ggpicrust2")
+optional_pkgs <- c("DESeq2", "ALDEx2", "edgeR", "limma")
 
 missing_required <- required_pkgs[!vapply(required_pkgs, requireNamespace, logical(1), quietly = TRUE)]
 if (length(missing_required) > 0) {
