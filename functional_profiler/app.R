@@ -1,5 +1,8 @@
 required_pkgs <- c("shiny", "phyloseq", "ggplot2", "vegan", "ggpicrust2")
-optional_pkgs <- c("DESeq2", "ALDEx2", "edgeR", "limma")
+optional_pkgs <- c("DESeq2", "edgeR", "limma")
+biocList <- c("ALDEx2")
+
+newBioc <- biocList[!(biocList %in% installed.packages()[,"Package"])]
 
 missing_required <- required_pkgs[!vapply(required_pkgs, requireNamespace, logical(1), quietly = TRUE)]
 if (length(missing_required) > 0) {
