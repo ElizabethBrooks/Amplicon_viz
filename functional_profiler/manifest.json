@@ -1901,14 +1901,14 @@
       }
     },
     "ggpicrust2": {
-      "Source": "Bioconductor",
-      "Repository": "http://cran.rstudio.com",
+      "Source": "github",
+      "Repository": null,
       "description": {
         "Package": "ggpicrust2",
         "Type": "Package",
         "Title": "Make 'PICRUSt2' Output Analysis and Visualization Easier",
-        "Version": "2.5.2",
-        "Author": "Chen Yang [aut, cre],\n  Liangliang Zhang [aut]",
+        "Version": "2.5.17",
+        "Author": "Chen Yang [aut, cre], Liangliang Zhang [aut]",
         "Maintainer": "Chen Yang <cafferychen7850@gmail.com>",
         "Authors@R": "c(\n    person(\"Chen\", \"Yang\", email = \"cafferychen7850@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Liangliang\", \"Zhang\", email = \"lxz716@case.edu \", role = \"aut\"))",
         "Description": "Provides a convenient way to analyze and visualize 'PICRUSt2' output with pre-defined plots and functions. Allows for generating statistical plots about microbiome functional predictions and offers customization options. Features a one-click option for creating publication-level plots, saving time and effort in producing professional-grade figures. Streamlines the 'PICRUSt2' analysis and visualization process. For more details, see Yang et al. (2023) <doi:10.1093/bioinformatics/btad470>.",
@@ -1917,17 +1917,27 @@
         "License": "MIT + file LICENSE",
         "Encoding": "UTF-8",
         "LazyData": "true",
-        "RoxygenNote": "7.3.2",
+        "RoxygenNote": "7.3.3",
         "Imports": "aplot, dplyr, ggplot2, grid, ggh4x, readr, tibble, tidyr,\nggprism, patchwork, ggplotify, magrittr, progress, stats,\nmethods, grDevices, tidygraph, ggraph, utils",
         "Depends": "R (>= 3.5.0)",
-        "Suggests": "Biobase, KEGGREST, ComplexHeatmap, BiocGenerics, testthat (>=\n3.0.0), ALDEx2, DESeq2, edgeR, GGally, ggdendro, limma,\nMaaslin2, metagenomeSeq, MicrobiomeStat, SummarizedExperiment,\ncirclize, lefser, fgsea, clusterProfiler, enrichplot, DOSE,\nggVennDiagram, UpSetR, igraph",
+        "Suggests": "Biobase, ggdendro, KEGGREST, ComplexHeatmap, BiocGenerics,\nknitr, rmarkdown, testthat (>= 3.0.0), ALDEx2, DESeq2, edgeR,\nGGally, limma, MicrobiomeStat, SummarizedExperiment, circlize,\nlefser, Maaslin2, metagenomeSeq, fgsea, clusterProfiler,\nenrichplot, DOSE, ggVennDiagram, UpSetR, igraph, ggridges,\nggrepel, logging",
         "Config/testthat/edition": "3",
         "biocViews": "Microbiome, Metagenomics, Software",
+        "VignetteBuilder": "knitr",
+        "RemoteType": "github",
+        "RemoteHost": "api.github.com",
+        "RemoteRepo": "ggpicrust2",
+        "RemoteUsername": "cafferychen777",
+        "RemotePkgRef": "cafferychen777/ggpicrust2",
+        "RemoteRef": "HEAD",
+        "RemoteSha": "a6247b13e33cf1279b4cd4bc3a1535b6329095ad",
+        "GithubRepo": "ggpicrust2",
+        "GithubUsername": "cafferychen777",
+        "GithubRef": "HEAD",
+        "GithubSHA1": "a6247b13e33cf1279b4cd4bc3a1535b6329095ad",
         "NeedsCompilation": "no",
-        "Packaged": "2025-08-25 21:59:22 UTC; apple",
-        "Repository": "CRAN",
-        "Date/Publication": "2025-08-25 23:00:02 UTC",
-        "Built": "R 4.5.0; ; 2025-08-26 00:18:20 UTC; unix"
+        "Packaged": "2026-06-15 14:55:31 UTC; bamflappy",
+        "Built": "R 4.5.3; ; 2026-06-15 14:55:32 UTC; unix"
       }
     },
     "ggplot2": {
@@ -2976,6 +2986,41 @@
         "RemoteRef": "otel",
         "RemoteRepos": "http://cran.rstudio.com",
         "RemoteSha": "0.2.0"
+      }
+    },
+    "pak": {
+      "Source": "CRAN",
+      "Repository": "http://cran.rstudio.com",
+      "description": {
+        "Package": "pak",
+        "Title": "Another Approach to Package Installation",
+        "Version": "0.10.0",
+        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Jim\", \"Hester\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\"),\n           comment = c(ROR = \"03wc8by49\")),\n    person(\"Winston\", \"Chang\", role = \"ctb\",\n           comment = \"R6, callr, processx\"),\n    person(\"Ascent Digital Services\", role = c(\"cph\", \"fnd\"),\n           comment = \"callr, processx\"),\n    person(\"Hadley\", \"Wickham\", role = c(\"ctb\", \"cph\"),\n           comment = \"cli, curl, pkgbuild, yaml\"),\n    person(\"Jeroen\", \"Ooms\", role = \"ctb\",\n           comment = \"curl, jsonlite\"),\n    person(\"Maëlle\", \"Salmon\", role = \"ctb\",\n           comment = \"desc, pkgsearch\"),\n    person(\"Duncan\", \"Temple Lang\", role = \"ctb\",\n           comment = \"jsonlite\"),\n    person(\"Lloyd\", \"Hilaiel\", role = \"cph\",\n           comment = \"jsonlite\"),\n    person(\"Alec\", \"Wong\", role = \"ctb\",\n           comment = \"keyring\"),\n    person(\"Michel Berkelaar and lpSolve authors\", role = \"ctb\",\n           comment = \"lpSolve\"),\n    person(\"R Consortium\", role = \"fnd\",\n           comment = \"pkgsearch\"),\n    person(\"Jay\", \"Loden\", role = \"ctb\",\n           comment = \"ps\"),\n    person(\"Dave\", \"Daeschler\", role = \"ctb\",\n           comment = \"ps\"),\n    person(\"Giampaolo\", \"Rodola\", role = \"ctb\",\n           comment = \"ps\"),\n    person(\"Shawn\", \"Garbett\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Jeremy\", \"Stephens\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Kirill\", \"Simonov\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Yihui\", \"Xie\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Zhuoer\", \"Dong\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Jeffrey\", \"Horner\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Will\", \"Beasley\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Brendan\", \"O'Connor\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Gregory\", \"Warnes\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Michael\", \"Quinn\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Zhian\", \"Kamvar\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Charlie\", \"Gao\", role = \"ctb\",\n           comment = \"yaml\"),\n    person(\"Kuba\", \"Podgórski\", role = \"ctb\",\n           comment = \"zip\"),\n    person(\"Rich\", \"Geldreich\", role = \"ctb\",\n           comment = \"zip\")\n  )",
+        "Description": "The goal of 'pak' is to make package installation faster and\n    more reliable. In particular, it performs all HTTP operations in\n    parallel, so metadata resolution and package downloads are fast.\n    Metadata and package files are cached on the local disk as well. 'pak'\n    has a dependency solver, so it finds version conflicts before\n    performing the installation. This version of 'pak' supports CRAN,\n    'Bioconductor' and 'GitHub' packages as well.",
+        "License": "GPL-3",
+        "URL": "https://pak.r-lib.org/, https://github.com/r-lib/pak",
+        "BugReports": "https://github.com/r-lib/pak/issues",
+        "Depends": "R (>= 3.5)",
+        "Imports": "tools, utils",
+        "Suggests": "callr (>= 3.7.0), cli (>= 3.2.0), covr, curl (>= 4.3.2), desc\n(>= 1.4.1), filelock (>= 1.0.2), gitcreds, glue (>= 1.6.2),\njsonlite (>= 1.8.0), keyring (>= 1.4.0), pingr, pkgbuild (>=\n1.4.2), pkgcache (>= 2.2.4), pkgdepends (>= 0.9.0), pkgload,\npkgsearch (>= 3.1.0), processx (>= 3.8.1), ps (>= 1.6.0),\nrstudioapi, testthat (>= 3.2.0), webfakes, withr, yaml",
+        "Biarch": "true",
+        "ByteCompile": "true",
+        "Config/build/extra-sources": "configure*",
+        "Config/needs/dependencies": "callr, cli, curl, desc, filelock, jsonlite,\nkeyring, lpSolve, pkgbuild, r-lib/pkgcache@feature/ppm-sso,\nr-lib/pkgdepends, pkgsearch, processx, ps, r-lib/tsitter,\ngaborcsardi/tstoml, yaml",
+        "Config/Needs/website": "r-lib/asciicast, rmarkdown, roxygen2,\ntidyverse/tidytemplate",
+        "Config/Needs/deploy": "cli (>= 3.2.0), curl, desc, gitcreds, glue@1.6.2,\ngaborcsardi/jsonlite, processx, R6@2.5.1",
+        "Config/Needs/check": "r-lib/pkgcache@feature/ppm-sso",
+        "Config/testthat/edition": "3",
+        "Config/usethis/last-upkeep": "2025-05-13",
+        "Encoding": "UTF-8",
+        "Config/roxygen2/version": "8.0.0",
+        "NeedsCompilation": "yes",
+        "Packaged": "2026-06-06 16:52:32 UTC; gaborcsardi",
+        "Author": "Gábor Csárdi [aut, cre],\n  Jim Hester [aut],\n  Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>),\n  Winston Chang [ctb] (R6, callr, processx),\n  Ascent Digital Services [cph, fnd] (callr, processx),\n  Hadley Wickham [ctb, cph] (cli, curl, pkgbuild, yaml),\n  Jeroen Ooms [ctb] (curl, jsonlite),\n  Maëlle Salmon [ctb] (desc, pkgsearch),\n  Duncan Temple Lang [ctb] (jsonlite),\n  Lloyd Hilaiel [cph] (jsonlite),\n  Alec Wong [ctb] (keyring),\n  Michel Berkelaar and lpSolve authors [ctb] (lpSolve),\n  R Consortium [fnd] (pkgsearch),\n  Jay Loden [ctb] (ps),\n  Dave Daeschler [ctb] (ps),\n  Giampaolo Rodola [ctb] (ps),\n  Shawn Garbett [ctb] (yaml),\n  Jeremy Stephens [ctb] (yaml),\n  Kirill Simonov [ctb] (yaml),\n  Yihui Xie [ctb] (yaml),\n  Zhuoer Dong [ctb] (yaml),\n  Jeffrey Horner [ctb] (yaml),\n  Will Beasley [ctb] (yaml),\n  Brendan O'Connor [ctb] (yaml),\n  Gregory Warnes [ctb] (yaml),\n  Michael Quinn [ctb] (yaml),\n  Zhian Kamvar [ctb] (yaml),\n  Charlie Gao [ctb] (yaml),\n  Kuba Podgórski [ctb] (zip),\n  Rich Geldreich [ctb] (zip)",
+        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2026-06-07 06:30:11 UTC",
+        "Built": "R 4.5.2; aarch64-apple-darwin20; 2026-06-07 06:40:14 UTC; unix"
       }
     },
     "patchwork": {
@@ -4404,7 +4449,7 @@
       "checksum": "d41d8cd98f00b204e9800998ecf8427e"
     },
     "app.R": {
-      "checksum": "12a3253767df3298bf6f2b58a6238afe"
+      "checksum": "67b69fc0f9797b4773ef3b8d7b60ab4e"
     },
     "data/centrifuge_reports.biom": {
       "checksum": "c05df8fe308e9b84c362832273169743"
