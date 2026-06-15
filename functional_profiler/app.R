@@ -6,7 +6,7 @@
 options(repos = c(CRAN = "https://cloud.r-project.org/"))
 packageList <- c("shiny", "ggplot2", "vegan", "ggpicrust2")
 biocList <- c("DESeq2", "phyloseq", "ALDEx2", "SummarizedExperiment", "Biobase", "devtools", 
-              "ComplexHeatmap", "BiocGenerics", "BiocManager", "metagenomeSeq", 
+              "ComplexHeatmap", "BiocGenerics", "metagenomeSeq", 
               "Maaslin2", "edgeR", "lefser", "limma", "KEGGREST")
 #devList <- c("cafferychen777/ggpicrust2")
 newPackages <- packageList[!(packageList %in% installed.packages()[,"Package"])]
@@ -16,6 +16,7 @@ if(length(newPackages)){
   install.packages(newPackages)
 }
 if(length(newBioc)){
+  install.packages("BiocManager")
   BiocManager::install(newBioc)
 }
 #if(length(newDev)){
