@@ -3,7 +3,7 @@
 # Modified: 15 June 2026
 
 # install any missing packages
-#options(repos = c(CRAN = "https://cloud.r-project.org/"))
+options(repos = c(CRAN = "https://cloud.r-project.org/"))
 packageList <- c("shiny", "ggplot2", "vegan", "ggpicrust2")
 biocList <- c("DESeq2", "phyloseq", "ALDEx2", "SummarizedExperiment", "Biobase", "devtools", 
               "ComplexHeatmap", "BiocGenerics", "BiocManager", "metagenomeSeq", 
