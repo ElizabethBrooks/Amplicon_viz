@@ -3,22 +3,24 @@
 # Modified: 15 June 2026
 
 # install any missing packages
-options(repos = c(CRAN = "https://cloud.r-project.org/"))
-packageList <- c("shiny", "ggplot2", "vegan", "devtools")
-biocList <- c("edgeR", "ALDEx2", "DESeq2", "limma", "phyloseq")
-devList <- c("cafferychen777/ggpicrust2")
+#options(repos = c(CRAN = "https://cloud.r-project.org/"))
+packageList <- c("shiny", "ggplot2", "vegan", "ggpicrust2")
+biocList <- c("DESeq2", "phyloseq", "ALDEx2", "SummarizedExperiment", "Biobase", "devtools", 
+              "ComplexHeatmap", "BiocGenerics", "BiocManager", "metagenomeSeq", 
+              "Maaslin2", "edgeR", "lefser", "limma", "KEGGREST")
+#devList <- c("cafferychen777/ggpicrust2")
 newPackages <- packageList[!(packageList %in% installed.packages()[,"Package"])]
 newBioc <- biocList[!(biocList %in% installed.packages()[,"Package"])]
-newDev <- devList[!(devList %in% installed.packages()[,"Package"])]
+#newDev <- devList[!(devList %in% installed.packages()[,"Package"])]
 if(length(newPackages)){
   install.packages(newPackages)
 }
 if(length(newBioc)){
   BiocManager::install(newBioc)
 }
-if(length(newDev)){
-  pak::pak("cafferychen777/ggpicrust2")
-}
+#if(length(newDev)){
+#  pak::pak("cafferychen777/ggpicrust2")
+#}
 suppressPackageStartupMessages({
   library(shiny)
   library(phyloseq)
