@@ -1,28 +1,17 @@
-required_pkgs <- c("shiny", "phyloseq", "ggplot2", "vegan", "ggpicrust2")
-optional_pkgs <- c("DESeq2", "edgeR", "limma")
-biocList <- c("ALDEx2")
+# Created by: Bharat Mishra
+# Edited by: Elizabeth Brooks
+# Modified: 15 June 2026
 
+# install any missing packages
+packageList <- c("shiny", "ggplot2", "vegan", "ggpicrust2")
+biocList <- c("edgeR", "ALDEx2", "DESeq2", "limma", "phyloseq")
+newPackages <- packageList[!(packageList %in% installed.packages()[,"Package"])]
 newBioc <- biocList[!(biocList %in% installed.packages()[,"Package"])]
-
-missing_required <- required_pkgs[!vapply(required_pkgs, requireNamespace, logical(1), quietly = TRUE)]
-if (length(missing_required) > 0) {
-  stop(
-    paste0(
-      "Missing required packages: ",
-      paste(missing_required, collapse = ", "),
-      "\nInstall CRAN packages with install.packages(...).",
-      "\nInstall Bioconductor packages with BiocManager::install(...)."
-    ),
-    call. = FALSE
-  )
+if(length(newPackages)){
+  install.packages(newPackages)
 }
-
-missing_optional <- optional_pkgs[!vapply(optional_pkgs, requireNamespace, logical(1), quietly = TRUE)]
-if (length(missing_optional) > 0) {
-  message(
-    "Optional packages not installed (some features may be unavailable): ",
-    paste(missing_optional, collapse = ", ")
-  )
+if(length(newBioc)){
+  BiocManager::install(newBioc)
 }
 
 suppressPackageStartupMessages({

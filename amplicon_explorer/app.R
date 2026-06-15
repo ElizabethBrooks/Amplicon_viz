@@ -1,3 +1,7 @@
+# Created by: Bharat Mishra
+# Edited by: Elizabeth Brooks
+# Modified: 15 June 2026
+
 required_pkgs <- c("shiny", "phyloseq", "ggplot2", "vegan")
 optional_pkgs <- c("biomformat")
 
