@@ -3,6 +3,7 @@
 # Modified: 15 June 2026
 
 # install any missing packages
+options(repos = c(CRAN = "https://cloud.r-project.org/"))
 packageList <- c("shiny", "ggplot2", "vegan", "devtools")
 biocList <- c("edgeR", "ALDEx2", "DESeq2", "limma", "phyloseq")
 devList <- c("cafferychen777/ggpicrust2")
