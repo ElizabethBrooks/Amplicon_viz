@@ -6,7 +6,8 @@
 options(repos = c(CRAN = "https://cloud.r-project.org/"))
 #biocList <- c("phyloseq", "ALDEx2", "DESeq2 "edgeR", "limma")
 biocList <- c("phyloseq", "ALDEx2", "edgeR", "limma")
-packageList <- c("shiny", "ggplot2", "vegan", "ggpicrust2")
+packageList <- c("shiny", "ggplot2", "vegan", "ggpicrust2",
+                 "matrixStats", "abind", "truncnorm", "png")
 newBioc <- biocList[!(biocList %in% installed.packages()[,"Package"])]
 newPackages <- packageList[!(packageList %in% installed.packages()[,"Package"])]
 if(length(newBioc)){
