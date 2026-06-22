@@ -3997,6 +3997,9 @@
       "checksum": "d41d8cd98f00b204e9800998ecf8427e"
     },
     "app.R": {
+      "checksum": "0431735c338ef75079b3fa32aee1e1d2"
+    },
+    "archived/app_full.R": {
       "checksum": "0e67f157ac085f1610af8d980bca2d2a"
     },
     "data/centrifuge_reports.biom": {
